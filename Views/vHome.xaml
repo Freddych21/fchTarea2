@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fchTarea2.Views.vHome"
+             Title="vHome">
+    <VerticalStackLayout
+        Spacing="20"
+        Padding="20">
+        <Label x:Name="lblNombre"
+               HorizontalTextAlignment="End"
+               FontSize="15"
+               TextColor="Red">
+        </Label>
+        <Label Text="HOME"
+               FontSize="20" 
+               HorizontalOptions="Center" />
+
+        <Button x:Name="btbRegistrarNotas"
+                Text="REGISTRAR NOTAS"
+                Clicked="btbRegistrarNotas_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

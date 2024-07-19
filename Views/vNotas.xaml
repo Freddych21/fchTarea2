@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fchTarea2.Views.vNotas">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="20">
+            <Label Text="SISTEMA DE CALIFICACIONES"
+                   FontSize="24"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Red"/>
+            <Grid RowSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Picker x:Name="pkEstudiantes" Title="Estudiantes"
+                        Grid.Row="0"
+                        Grid.Column="0">
+                    <Picker.Items>
+                        <x:String>Pedro Molina</x:String>
+                        <x:String>Juan López</x:String>
+                        <x:String>Mishell Ruiz</x:String>
+                        <x:String>Luisa Gomez</x:String>
+                        <x:String>José Romero</x:String>
+                    </Picker.Items>
+                </Picker>
+                <DatePicker x:Name="dpFecha" Format="dd/mm/yyyy"
+                            TextColor="Red"
+                            HorizontalOptions="End"
+                            Grid.Row="0"
+                            Grid.Column="1"/>
+                <Label Text="PARCIAL 1"
+                       FontSize="24"
+                       HorizontalTextAlignment="Start"
+                       TextColor="Green"
+                       Grid.Row="1"
+                       Grid.Column="0"/>
+                <Label Text="TAREAS"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"
+                       FontSize="18"
+                       Grid.Row="2"
+                       Grid.Column="0"/>
+
+                <Entry x:Name="txtDato1"
+                       Placeholder="Ingrese nota parcial 1"
+                       Keyboard="Numeric"
+                       MaxLength="4"
+                       Grid.Row="2"
+                       Grid.Column="1"/>
+                <Label Text="EXAMEN"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"
+                       FontSize="18"
+                       Grid.Row="3"
+                       Grid.Column="0"/>
+                <Entry x:Name="txtDato2"
+                       Placeholder="Ingrese nota examen parcial 1"
+                       Keyboard="Numeric"
+                       MaxLength="4"
+                       Grid.Row="3"
+                       Grid.Column="1"/>
+                <Label Text="PARCIAL 2"
+                       FontSize="24"
+                       HorizontalTextAlignment="Start"
+                       TextColor="Green"
+                       Grid.Row="4"
+                       Grid.Column="0"/>
+                <Label Text="TAREAS"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"
+                       FontSize="18"
+                       Grid.Row="5"
+                       Grid.Column="0"/>
+                <Entry x:Name="txtDato3"
+                       Placeholder="Ingrese dato 1"
+                       Keyboard="Numeric"
+                       MaxLength="3"
+                       Grid.Row="5"
+                       Grid.Column="1"/>
+                <Label Text="EXAMEN"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"
+                       FontSize="18"
+                       Grid.Row="6"
+                       Grid.Column="0"/>
+                <Entry x:Name="txtDato4"
+                       Placeholder="Ingrese dato 2"
+                       Keyboard="Numeric"
+                       MaxLength="3"
+                       Grid.Row="6"
+                       Grid.Column="1"/>
+
+            </Grid>
+            <Button x:Name="btbCalcular"
+                    Text="Calcular Notas"
+		            SemanticProperties.Hint="Counts the number of times you click"
+                    Clicked="btbCalcular_Clicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
